@@ -1,84 +1,104 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-		<title>Welcome | Legit News Corp.</title>
-		<link rel="stylesheet" href="css/main.css" />
-		<script type="text/javascript" src="js/main.js"></script>
+		<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+		<title>Home</title>
+		<link rel="stylesheet" href="/css/styles.css" />
+		<script src="/js/main.js"></script>
 		<style>
-		.bg {
-			
-			background-image: url("images/bg-grey.png");
-			background-color: #ddd;
-			
-			width: 100%;
-			height: 100%;
-			
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-				
-		}
+	    	body {
+	    		
+		    	background-image: url("/images/bg-grey.png");
+			    
+			    width: 100%;
+    			height: 100%;
+    			
+    			background-position: center;
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    			
+    		}
+            .title {
+    	        
+    	        position: absolute;
+    	        left: 0;
+    	        top: 35%;
+    	        width: 100%;
+    	        text-align: center;
+    	        color: #ccc;
+    	        opacity: 1;
+    	        z-index: -1;
+    	
+            }
+            .title span {
+    	        
+    	        background-color: #555;
+    	        color: #ccc;
+    	        padding: 18px;
+    	        font-size: 25px;
+    	        letter-spacing: 5px;
+    	        
+            }
 		</style>
 	</head>
-	<body class="bg" >
-		<header class="main" id="h">
+	<body onload="loadDynamicObjects()">
+		<header class="main">
 			<nav>
-				<a href="index.html" class="this" >Home</a>
-				<a href="about_page.html" >About</a>
-				<a href="store_page_all.html" >Store</a>
-				<a href="contact_page.html" >Contact Us</a>
+				<a href="/index.html" class="this" >Home</a>
+				<a href="/news.html" >News</a>
+				<a href="/about.html" >About</a>
+				<a href="/store.html" >Store</a>
+				<a href="/contact.html" >Contact Us</a>
 			</nav>
 		</header>
-		<main id="main">
-			<div class="title main" >
-				<span>Welcome to Legit News Corp.</span>
-			</div>
-		</main>
-		<footer class="main" >
-			<div class="footer-container" >
-				<div class="footer-container-" >
-					<div class="footer-home" >
-						<a href="index.html" >
-							<img src="images/icon.png" with="50px" height="50px" />
-						</a>
-					</div>
-					<div class="footer-info" >
-						<div class="footer-listContainer" >
-							<h5 class="footer-title" >PRODUCTS</h5>
-							<ul class="footer-list" >
-								<li><a href="store_page_software.html" >Nugets</a></li>
-								<li><a href="store_page_hardwhere.html" >Gears</a></li>
-								<li><a href="store_page_electronics.html" >Wires Plus</a></li>
-								<li><a href="store_page_hardwhere.html" >Tool Kits</a></li>
-							</ul>
-						</div>
-						<div class="footer-listContainer" >
-							<h5 class="footer-title" >COMPANY</h5>
-							<ul class="footer-list" >
-								<li><a href="about_page.html" >About</a></li>
-								<li><a href="contact_page.html" >Contact Us</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer-copyright" >
-						<div class="footer-copyright-" >
-							<div class="footer-copyright-text" >
-								<ul>
-									<li><a href="https://facebook.com" >Facebook</a></li>
-									<li><a href="https://twitter.com" >Twitter</a></li>
-									<li><a href="https://au.linkedin.com/" >LinkedIn</a></li>
-									<li><a href="https://youtu.be" >Youtube</a></li>
-								</ul>
-								<p>
-									Site design / logo &copy; 2019 Legit News Corps; In part with my massive Cock.<br/>
-									22/03/2019
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
+        <main id="main">
+            <div class="title main">
+                <span>Welcome to Legit News Corp.</span>
+            </div>
+            <div class="featured">
+            </div>
+            <footer class="main">
+                <div class="footer-container">
+                    <div class="footer-container-">
+                        <div class="footer-home">
+                            <a href="/index.html">
+                                <img src="/images/icon.png" with="50px" height="50px" />
+                            </a>
+                        </div>
+                        <div class="footer-info">
+                            <div class="footer-listContainer">
+                                <h5 class="footer-title">PRODUCTS</h5>
+                                <ul class="footer-list">
+                                    <li><a href="store_page_software.html">Nugets</a></li>
+                                    <li><a href="store_page_hardwhere.html">Gears</a></li>
+                                    <li><a href="store_page_electronics.html">Wires Plus</a></li>
+                                    <li><a href="store_page_hardwhere.html">Tool Kits</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-listContainer">
+                                <h5 class="footer-title">COMPANY</h5>
+                                <ul class="footer-list">
+                                    <li><a href="/about.html">About</a></li>
+                                    <li><a href="/contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-copyright">
+                            <div class="footer-copyright-">
+                                <div class="footer-copyright-text">
+                                    <ul>
+                                        <li><a href="https://facebook.com">Facebook</a></li>
+                                        <li><a href="https://twitter.com">Twitter</a></li>
+                                        <li><a href="https://au.linkedin.com/">LinkedIn</a></li>
+                                        <li><a href="https://youtu.be">Youtube</a></li>
+                                    </ul>
+                                    <p id="copyright"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
 	</body>
 </html>

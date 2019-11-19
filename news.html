@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <title>News</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/main.js"></script>
+    <style>
+        .title {
+            position: absolute;
+            left: 11%;
+            top: 17%;
+            text-align: center;
+            color: #ccc;
+            opacity: 1;
+            z-index: -1;
+        }
+        .title span {
+            background-color: #555;
+            color: #ccc;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body onload="loadDynamicObjects()">
+    <header class="main">
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/news.html" class="this">News</a>
+            <a href="/about.html">About</a>
+            <a href="/store.html">Store</a>
+            <a href="/contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="title main">
+            <span>Breaking News from YOUR Local Area</span>
+        </div>
+        <div class="featured">
+        </div>
+    </main>
+    <footer class="main">
+        <div class="footer-container">
+            <div class="footer-container-">
+                <div class="footer-home">
+                    <a href="/index.html">
+                        <img src="/images/icon.png" with="50px" height="50px" />
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-listContainer">
+                        <h5 class="footer-title">PRODUCTS</h5>
+                        <ul class="footer-list">
+                            <li><a href="store_page_software.html">Nugets</a></li>
+                            <li><a href="store_page_hardwhere.html">Gears</a></li>
+                            <li><a href="store_page_electronics.html">Wires Plus</a></li>
+                            <li><a href="store_page_hardwhere.html">Tool Kits</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-listContainer">
+                        <h5 class="footer-title">COMPANY</h5>
+                        <ul class="footer-list">
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="footer-copyright-">
+                        <div class="footer-copyright-text">
+                            <ul>
+                                <li><a href="https://facebook.com">Facebook</a></li>
+                                <li><a href="https://twitter.com">Twitter</a></li>
+                                <li><a href="https://au.linkedin.com/">LinkedIn</a></li>
+                                <li><a href="https://youtu.be">Youtube</a></li>
+                            </ul>
+                            <p id="copyright"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
