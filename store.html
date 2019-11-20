@@ -7,44 +7,41 @@
         <script src="/js/main.js"></script>
         <style>
             .title {
-                position: absolute;
-                right: 11%;
-                top: 148px;
+                float: right;
+                margin: 148px 11vw 25px 11vw;
                 text-align: center;
                 color: #ccc;
                 opacity: 1;
                 z-index: -1;
             }
-
-                .title span {
-                    background-color: #555;
-                    color: #ccc;
-                    padding: 18px;
-                    font-size: 25px;
-                    letter-spacing: 2px;
-                }
+            .title span {
+                background-color: #555;
+                color: #ccc;
+                padding: 18px;
+                font-size: 25px;
+                letter-spacing: 2px;
+            }
 
             .featured {
-                position: absolute;
-                top: 218px;
-                left: 11%;
+                margin: 0 11vw 100px 11vw;
+                border-spacing: 0;
                 width: 78%;
             }
 
-                .featured td {
-                    background-color: #ccc;
-                    vertical-align: top;
-                    text-align: left;
-                    color: #555;
-                }
+            .featured td {
+                background-color: #ccc;
+                background-size: cover;
+                vertical-align: top;
+                text-align: left;
+                color: #555;
+            }
 
-                .featured img {
-                    padding: 0;
-                }
-
-                .featured div {
-                    padding: 12px;
-                }
+            .featured div {
+                padding: 12px;
+            }
+            .featured div div {
+                padding: 12px 6px;
+            }
 
             .gap {
                 background-color: black;
@@ -66,74 +63,57 @@
             <div class="title main">
                 <span>Buy Stuff, QUICK! Do it NOW!!! Right Now!</span>
             </div>
-            <table class="featured">
+            <table class="featured" >
                 <tr>
-                    <td width="100"><img src="" width="200" height="100" /></td>
-                    <td><div>Description Text.</div></td>
+                    <td width="200" height="100" style="background-image: url(/store/gravel.jpg)"></td>
+                    <td width="125"><div><h>Gravel (Singular)</h><br /><p>$59.99 USD</p></div></td>
+                    <td><div>Desctiption:<br /><div>Yup. That's gravel alright! You can throw it a people and uhhh... yeah, that's about it. It's gravel, what can I say?</div></div></td>
                 </tr>
-                <tr class="gap" />
+                <!--<tr class="gap" />
                 <tr>
-                    <td width="100"><img src="" width="200" height="100" /></td>
-                    <td><div>Description Text.</div></td>
-                </tr>
-                <tr class="gap" />
-                <tr>
-                    <td width="100"><img src="" width="200" height="100" /></td>
-                    <td><div>Description Text.</div></td>
-                </tr>
-                <tr class="gap" />
-                <tr>
-                    <td width="100"><img src="" width="200" height="100" /></td>
-                    <td><div>Description Text.</div></td>
-                </tr>
-                <tr class="gap" />
-                <tr>
-                    <td width="100"><img src="" width="200" height="100" /></td>
-                    <td><div>Description Text.</div></td>
-                </tr>
+                    <td width="200" height="100"></td>
+                    <td width="125"><div><h>Item Name</h><br /><p>$XX.XX USD</p></div></td>
+                    <td><div>Desctiption:<br /><div>Description body.</div></div></td>
+                </tr>-->
             </table>
-            <footer class="main">
-                <div class="footer-container">
-                    <div class="footer-container-">
-                        <div class="footer-home">
-                            <a href="/index.html">
-                                <img src="/images/icon.png" with="50px" height="50px" />
-                            </a>
+        </main>
+        <footer class="main">
+            <div class="footer-container">
+                <div class="footer-container-">
+                    <div class="footer-home">
+                        <a href="/index.html">
+                            <img src="/images/icon.png" with="50px" height="50px" />
+                        </a>
+                    </div>
+                    <div class="footer-info">
+                        <div class="footer-listContainer">
+                            <h5 class="footer-title">PRODUCTS</h5>
+                            <ul class="footer-list">
+                                <li><a href="store_page_software.html">Nugets</a></li>
+                                <li><a href="store_page_hardwhere.html">Gears</a></li>
+                                <li><a href="store_page_electronics.html">Wires Plus</a></li>
+                                <li><a href="store_page_hardwhere.html">Tool Kits</a></li>
+                            </ul>
                         </div>
-                        <div class="footer-info">
-                            <div class="footer-listContainer">
-                                <h5 class="footer-title">PRODUCTS</h5>
-                                <ul class="footer-list">
-                                    <li><a href="store_page_software.html">Nugets</a></li>
-                                    <li><a href="store_page_hardwhere.html">Gears</a></li>
-                                    <li><a href="store_page_electronics.html">Wires Plus</a></li>
-                                    <li><a href="store_page_hardwhere.html">Tool Kits</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-listContainer">
-                                <h5 class="footer-title">COMPANY</h5>
-                                <ul class="footer-list">
-                                    <li><a href="/about.html">About</a></li>
-                                    <li><a href="/contact.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer-copyright">
-                            <div class="footer-copyright-">
-                                <div class="footer-copyright-text">
-                                    <ul>
-                                        <li><a href="https://facebook.com">Facebook</a></li>
-                                        <li><a href="https://twitter.com">Twitter</a></li>
-                                        <li><a href="https://au.linkedin.com/">LinkedIn</a></li>
-                                        <li><a href="https://youtu.be">Youtube</a></li>
-                                    </ul>
-                                    <p id="copyright"></p>
-                                </div>
-                            </div>
+                        <div class="footer-listContainer">
+                            <h5 class="footer-title">COMPANY</h5>
+                            <ul class="footer-list">
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="/contact.html">Contact Us</a></li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="footer-copyright">
+                        <ul>
+                            <li><a href="https://facebook.com">Facebook</a></li>
+                            <li><a href="https://twitter.com">Twitter</a></li>
+                            <li><a href="https://au.linkedin.com/">LinkedIn</a></li>
+                            <li><a href="https://youtu.be">Youtube</a></li>
+                        </ul>
+                        <p id="copyright"></p>
+                    </div>
                 </div>
-            </footer>
-        </main>
+            </div>
+        </footer>
     </body>
 </html>
