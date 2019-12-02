@@ -1,101 +1,109 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
-		<title>Home</title>
-		<link rel="stylesheet" href="/css/styles.css" />
-		<script src="/js/main.js"></script>
-		<style>
-	    	body {
-	    		
-		    	background-image: url("/images/bg-grey.png");
-			    
-			    width: 100%;
-    			height: 100%;
-    			
-    			background-position: center;
-    			background-repeat: no-repeat;
-    			background-size: cover;
-    			
-    		}
-            .title {
-    	        
-    	        position: absolute;
-    	        left: 0;
-    	        top: 35%;
-    	        width: 100%;
-    	        text-align: center;
-    	        color: #ccc;
-    	        opacity: 1;
-    	        z-index: -1;
-    	
-            }
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/main.js"></script>
+    <style>
+        body {
+            background-image: url("/images/bg-grey.png");
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .title {
+            position: absolute;
+            left: 0;
+            top: 35%;
+            width: 100%;
+            text-align: center;
+            color: #ccc;
+            opacity: 1;
+            z-index: -1;
+        }
+
             .title span {
-    	        
-    	        background-color: #555;
-    	        color: #ccc;
-    	        padding: 18px;
-    	        font-size: 25px;
-    	        letter-spacing: 5px;
-    	        
+                background-color: #555;
+                color: #ccc;
+                padding: 18px;
+                font-size: 25px;
+                letter-spacing: 5px;
             }
-		</style>
-	</head>
-	<body onload="loadDynamicObjects()">
-		<header class="main">
-			<nav>
-				<a href="/index.html" class="this" >Home</a>
-				<a href="/news.html" >News</a>
-				<a href="/about.html" >About</a>
-				<a href="/store.html" >Store</a>
-				<a href="/contact.html" >Contact Us</a>
-			</nav>
-		</header>
-        <main id="main">
-            <div class="title main">
-                <span>Welcome to Legit News Corp.</span>
+    </style>
+</head>
+<body onload="loadDynamicObjects()">
+    <header class="main">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/" title="Deffo Legit News" >DLN</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" id="navLinks"></div>
             </div>
-            <div class="featured">
-            </div>
+        </nav>
+        <nav>
             
-        </main>
-        <footer class="main">
-            <div class="footer-container">
-                <div class="footer-container-">
-                    <div class="footer-home">
-                        <a href="/index.html">
-                            <img src="/images/icon.png" with="50px" height="50px" />
-                        </a>
-                    </div>
-                    <div class="footer-info">
-                        <div class="footer-listContainer">
-                            <h5 class="footer-title">PRODUCTS</h5>
-                            <ul class="footer-list">
-                                <li><a href="store_page_software.html">Nugets</a></li>
-                                <li><a href="store_page_hardwhere.html">Gears</a></li>
-                                <li><a href="store_page_electronics.html">Wires Plus</a></li>
-                                <li><a href="store_page_hardwhere.html">Tool Kits</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-listContainer">
-                            <h5 class="footer-title">COMPANY</h5>
-                            <ul class="footer-list">
-                                <li><a href="/about.html">About</a></li>
-                                <li><a href="/contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-copyright">
-                        <ul>
-                            <li><a href="https://facebook.com">Facebook</a></li>
-                            <li><a href="https://twitter.com">Twitter</a></li>
-                            <li><a href="https://au.linkedin.com/">LinkedIn</a></li>
-                            <li><a href="https://youtu.be">Youtube</a></li>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="title main">
+            <span>Welcome to Legit News Corp.</span>
+        </div>
+        <div class="featured">
+        </div>
+
+    </main>
+    <footer class="main">
+        <div class="footer-container">
+            <div class="footer-container-">
+                <div class="footer-home">
+                    <a href="/index.html">
+                        <img src="/images/icon.png" with="50px" height="50px" />
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-listContainer">
+                        <h5 class="footer-title">PRODUCTS</h5>
+                        <ul class="footer-list">
+                            <li><a href="store_page_software.html">Nugets</a></li>
+                            <li><a href="store_page_hardwhere.html">Gears</a></li>
+                            <li><a href="store_page_electronics.html">Wires Plus</a></li>
+                            <li><a href="store_page_hardwhere.html">Tool Kits</a></li>
                         </ul>
-                        <p id="copyright"></p>
+                    </div>
+                    <div class="footer-listContainer">
+                        <h5 class="footer-title">COMPANY</h5>
+                        <ul class="footer-list">
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/contact.html">Contact Us</a></li>
+                        </ul>
                     </div>
                 </div>
+                <div class="footer-copyright">
+                    <ul>
+                        <li><a href="https://facebook.com">Facebook</a></li>
+                        <li><a href="https://twitter.com">Twitter</a></li>
+                        <li><a href="https://au.linkedin.com/">LinkedIn</a></li>
+                        <li><a href="https://youtu.be">Youtube</a></li>
+                    </ul>
+                    <p id="copyright"></p>
+                </div>
             </div>
-        </footer>
-	</body>
+        </div>
+    </footer>
+
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
 </html>
