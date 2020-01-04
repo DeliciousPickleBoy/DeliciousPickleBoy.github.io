@@ -1,0 +1,49 @@
+body, html { color: #777; }
+body { background-color: #ddd; }
+
+header.main { background-color: #fefefe; }
+
+/* Menu Strip */
+header.main .navbar-brand { color: rgba(0, 0, 0, 0.9) }
+header.main a.nav-link.active { color: #737372 !important; }
+header.main a.nav-link.active:hover { color: #4B4B4A !important; }
+header.main a.nav-link.active:active { color: #191918 !important; }
+header.main a.nav-link.disabled { color: #AEAEAD !important; }
+
+.title { color: #ccc; }
+.title div {
+    background-color: #555;
+    color: #ccc;
+}
+
+.featured { color: #ccc; }
+
+.placeholder { background: linear-gradient(180deg, #ccc, #aaa, #ccc); }
+
+.clock { color: #ccc; }
+.clock canvas { color: #ccc; }
+.clock img { color: #ccc; }
+
+.text { color: #555; }
+.text div { background-color: #eee; }
+.text div span { background-color: #eee; }
+
+/* Footer */
+.options-button * { filter: brightness(1); }
+.options-button:hover * { filter: brightness(0.9); }
+.options-button:focus * { filter: brightness(0.75); }
+.options-pannel * { background: #3d3c3b; }
+
+footer.main {
+    box-shadow: 0 100vh 0 100vh #333;
+    background-color: #333;
+    color: #888;
+}
+
+.footer-list li a { color: #888; }
+.footer-list li a:hover { color: #aaa; }
+.footer-list li a:active { color: #ccc; }
+
+.footer-copyright li a { color: #888; }
+.footer-copyright li a:hover { color: #aaa; }
+.footer-copyright li a:active { color: #ccc; }

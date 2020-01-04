@@ -5,31 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
-    <title>News</title>
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <title>Store</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link id="theme" rel="stylesheet" href="/css/colors/light.css" />
     <script src="/js/main.js"></script>
+    <script src="/js/loaders/news-loader.js"></script>
     <style>
-        .title {
-            position: absolute;
-            left: 11%;
-            top: 17%;
-            text-align: center;
-            color: #ccc;
-            opacity: 1;
-            z-index: -1;
+        main {
+            padding: 139px 11vw 100px 11vw;
+            display: flex;
+            flex-flow: column nowrap;
         }
 
-        .title span {
-            background-color: #555;
-            color: #ccc;
-            padding: 18px;
-            font-size: 25px;
-            letter-spacing: 2px;
+        .title {
+            margin-bottom: 4px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .title div div {
+            padding: 0;
+        }
+
+        .featured {
+            margin: 0;
+        }
+
+        .featured a {
+            margin-top: 12.5px;
+            background-color: #ccc;
+            min-height: 100px;
+            vertical-align: top;
+            text-align: left;
+            color: #555;
+            display: flex;
+            flex-flow: row;
+            text-decoration: none;
+            transition: 0.75s;
+        }
+
+        .featured a:hover {
+            background-color: #bbb;
+        }
+
+        .featured a:active {
+            background-color: #aaa;
+        }
+
+        .featured .placeholder {
+            margin-top: 12.5px;
+            min-height: 100px;
+            vertical-align: top;
+        }
+
+        .featured-image {
+            min-width: 200px;
+            min-height: 100px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .featured-body {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .featured-body div {
+            padding: 12px 24px;
+        }
+
+        .featured-body div div {
+            padding: 12px 6px;
         }
     </style>
+    <script>setTheme();</script>
 </head>
-<body onload="loadDynamicObjects()">
+<body onload="loadDynamicObjects(); loadArticles();">
     <header class="main">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/" title="Deffo Legit News" >DLN</a>
@@ -41,19 +94,80 @@
             </div>
         </nav>
     </header>
-    <main id="main">
+    <main class="main">
         <div class="title main">
-            <span>Breaking News from YOUR Local Area</span>
+            <div>
+                <div>Breaking News </div>
+                <div>in YOUR local Area</div>
+            </div>
         </div>
-        <div class="featured">
+        <div class="featured" id="articles"> 
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
         </div>
     </main>
     <footer class="main">
+        <div id="oPannel" class="options-pannel" style="margin-right: -100%">
+            <div>
+                <button id="themeToggle" class="theme-button" OnClick="ToggleTheme();">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+                        <metadata>
+                            <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                            <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                    <rdf:Description rdf:about="" />
+                                </rdf:RDF>
+                            </x:xmpmeta>
+                            <?xpacket end="w"?>
+                        </metadata>
+                        <defs>
+                            <style>
+
+                                .theme-btn {
+                                    fill: #fff;
+                                    fill-rule: evenodd;
+                                }
+                            </style>
+                        </defs>
+                        <path id="themeTogglePath" class="theme-btn" d="M921.838,158.162C1019.56,255.883,1080,390.883,1080,540c0,298.234-241.766,540-540,540-149.117,0-284.117-60.44-381.838-158.162Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button id="optionToggle" class="options-button" OnClick="ToggleOptionsPannel();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="559" height="554" viewBox="0 0 559 554">
+                <metadata>
+                    <?xpacket begin="&#65279;" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <rdf:Description rdf:about="" />
+                        </rdf:RDF>
+                    </x:xmpmeta>
+                    <?xpacket end="w"?>
+                </metadata>
+                <defs>
+                    <style>
+                        .option-btn {
+                            fill: #212121;
+                            fill-rule: evenodd;
+                        }
+                    </style>
+                </defs>
+                <path id="Top_Rect" class="option-btn" d="M448.853,44.423l65.56,64.9a45.566,45.566,0,0,1,0,64.9,46.691,46.691,0,0,1-65.56,0l-65.56-64.9a45.566,45.566,0,0,1,0-64.9A46.691,46.691,0,0,1,448.853,44.423Z" />
+                <path id="Middle_Rect" class="option-btn" d="M274.025,44.423L514.413,282.394a45.567,45.567,0,0,1,0,64.9,46.691,46.691,0,0,1-65.56,0L208.465,109.324a45.566,45.566,0,0,1,0-64.9A46.691,46.691,0,0,1,274.025,44.423Z" />
+                <path id="Bottom_Rect" class="option-btn" d="M110.124,55.24L503.486,444.647a45.567,45.567,0,0,1,0,64.9,46.691,46.691,0,0,1-65.56,0L44.564,120.141a45.566,45.566,0,0,1,0-64.9A46.691,46.691,0,0,1,110.124,55.24Z" />
+            </svg>
+        </button>
         <div class="footer-container">
             <div class="footer-container-">
                 <div class="footer-home">
-                    <a href="/index.html">
-                        <img src="/images/icon.png" with="50px" height="50px" />
+                    <a href="/">
+                        <img src="/img/icon.png" with="50px" height="50px" />
                     </a>
                 </div>
                 <div class="footer-info">

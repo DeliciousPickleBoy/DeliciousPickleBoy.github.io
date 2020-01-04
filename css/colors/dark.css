@@ -1,0 +1,65 @@
+body, html { color: #777675; }
+body {
+    background-color: #171615;
+    overflow: visible;
+}
+
+::-webkit-scrollbar-thumb { background: #232221; }
+::-webkit-scrollbar { background-color: #191817; }
+
+main {
+    background-image: none !important;
+    background-color: #171615;
+}
+
+/* Menu Strip */
+header.main .navbar { background-color: #282726 !important; }
+header.main .navbar-brand { color: rgba(192, 192, 191, 0.9) !important; }
+
+header.main a.nav-link {color: #c2c1c0 !important; }
+header.main a.nav-link:hover { color: #b1b0af !important; }
+header.main a.nav-link:active { color: #a5a4a3 !important; }
+
+header.main a.nav-link.active { color: #e0dfde !important; }
+header.main a.nav-link.active:hover { color: #cecdcc !important; }
+header.main a.nav-link.active:active { color: #c2c1c0 !important; }
+
+header.main a.nav-link.disabled { color: #8e8d8c !important; }
+
+.title { color: #cccbca; }
+.title div {
+    background-color: #262524;
+    color: #cccbca;
+}
+
+.featured { color: #cccbca; }
+
+.placeholder { background: linear-gradient(180deg, #222120, #1d1c1b, #222120); }
+
+.clock { color: #cccbca; }
+.clock canvas { color: #cccbca; }
+.clock img { color: #cccbca; }
+
+.text { color: #555453; }
+.text div { background-color: #eeedec; }
+.text div span { background-color: #eeedec; }
+
+/* Footer */
+.options-button * { filter: brightness(2); }
+.options-button:hover * { filter: brightness(2.1); }
+.options-button:focus * { filter: brightness(2.25); }
+.options-pannel * { background: #272625; }
+
+footer.main {
+    box-shadow: 0 100vh 0 100vh #1d1c1b;
+    background-color: #1d1c1b;
+    color: #888786;
+}
+
+.footer-list li a { color: #888786; }
+.footer-list li a:hover { color: #aaa9a8; }
+.footer-list li a:active { color: #cccbca; }
+
+.footer-copyright li a { color: #888786; }
+.footer-copyright li a:hover { color: #aaa9a8; }
+.footer-copyright li a:active { color: #cccbca; }

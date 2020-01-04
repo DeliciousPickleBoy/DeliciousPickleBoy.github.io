@@ -5,41 +5,128 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
     <title>Home</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link id="theme" rel="stylesheet" href="/css/colors/light.css" />
     <script src="/js/main.js"></script>
+    <script src="/js/loaders/index-loader.js"></script>
     <style>
-        body {
-            background-image: url("/images/bg-grey.png");
-            width: 100%;
-            height: 100%;
+        main {
+            background-image: url("/img/bg-grey.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
         .title {
-            position: absolute;
+            position: relative;
             left: 0;
-            top: 35%;
-            width: 100%;
-            text-align: center;
-            color: #ccc;
-            opacity: 1;
-            z-index: -1;
+            top: 35vh;
+            width: 100vw;
         }
 
-            .title span {
-                background-color: #555;
-                color: #ccc;
-                padding: 18px;
-                font-size: 25px;
-                letter-spacing: 5px;
-            }
+        .title * {
+            letter-spacing: 5px;
+        }
+
+        .featured {
+            margin: 42.5vh 11vw 100px 11vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .featured * {
+            min-width: 250px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        .featured * * {
+            margin: 0;
+        }
+
+        .featured * * * {
+            width: 250px;
+            height: 200px;
+            margin: 12.5px;
+        }
+
+        .article {
+            transition: 1s;
+            text-decoration: none !important;
+            background: #eee;
+        }
+
+        .article * {
+            overflow: hidden;
+            transition: 0.5s, transform 0s;
+            max-height: 70px;
+            min-height: 36px;
+            width: inherit;
+            height: auto;
+            margin: 0;
+            transform: translateY(calc(-100% + 8px));
+            padding: 4px 15px;
+            justify-content: left;
+            background: #eee;
+            color: #333;
+        }
+
+        .article .bg {
+            transition: 1s, height 0s;
+            max-height: inherit;
+            height: calc(100% - 8px);
+            transform: none;
+            filter: brightness(1);
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        .width-based {
+            background-size: 100% auto !important;
+        }
+
+        .height-based {
+            background-size: auto 100% !important;
+        }
+
+        .article:hover, .article:hover * {
+            background: #fff;
+        }
+
+        .article:hover .bg {
+            filter: brightness(0.9);
+        }
+
+        .article:hover .bg.width-based {
+            background-size: 112.5% auto !important;
+        }
+
+        .article:hover .bg.height-based {
+            background-size: auto 112.5% !important;
+        }
+
+        .article:active, .article:hover * {
+            background: #ddd;
+        }
+
+        .article:active .bg {
+            filter: brightness(0.825);
+        }
+
+        .article:active .bg.width-based {
+            background-size: 118.75% auto !important;
+        }
+
+        .article:active .bg.height-based {
+            background-size: auto 118.75% !important;
+        }
     </style>
+    <script>setTheme();</script>
 </head>
-<body onload="loadDynamicObjects()">
+<body onload="loadDynamicObjects(); loadIndex();">
     <header class="main">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/" title="Deffo Legit News" >DLN</a>
@@ -50,24 +137,81 @@
                 <div class="navbar-nav" id="navLinks"></div>
             </div>
         </nav>
-        <nav>
-            
-        </nav>
     </header>
-    <main id="main">
-        <div class="title main">
-            <span>Welcome to Legit News Corp.</span>
+    <main class="main">
+        <div class="title">
+            <div>Welcome to Legit News Corp.</div>
         </div>
         <div class="featured">
+            <div id="featured">
+                <div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                </div>
+                <div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                </div>
+            </div>
         </div>
-
     </main>
     <footer class="main">
+        <div id="oPannel" class="options-pannel" style="margin-right: -100%">
+            <div>
+                <button id="themeToggle" class="theme-button" OnClick="ToggleTheme();">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+                        <metadata>
+                            <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                            <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                    <rdf:Description rdf:about="" />
+                                </rdf:RDF>
+                            </x:xmpmeta>
+                            <?xpacket end="w"?>
+                        </metadata>
+                        <defs>
+                            <style>
+
+                                .theme-btn {
+                                    fill: #fff;
+                                    fill-rule: evenodd;
+                                }
+                            </style>
+                        </defs>
+                        <path id="themeTogglePath" class="theme-btn" d="M921.838,158.162C1019.56,255.883,1080,390.883,1080,540c0,298.234-241.766,540-540,540-149.117,0-284.117-60.44-381.838-158.162Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button id="optionToggle" class="options-button" OnClick="ToggleOptionsPannel();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="559" height="554" viewBox="0 0 559 554">
+                <metadata>
+                    <?xpacket begin="&#65279;" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <rdf:Description rdf:about="" />
+                        </rdf:RDF>
+                    </x:xmpmeta>
+                    <?xpacket end="w"?>
+                </metadata>
+                <defs>
+                    <style>
+                        .option-btn {
+                            fill: #212121;
+                            fill-rule: evenodd;
+                        }
+                    </style>
+                </defs>
+                <path id="Top_Rect" class="option-btn" d="M448.853,44.423l65.56,64.9a45.566,45.566,0,0,1,0,64.9,46.691,46.691,0,0,1-65.56,0l-65.56-64.9a45.566,45.566,0,0,1,0-64.9A46.691,46.691,0,0,1,448.853,44.423Z" />
+                <path id="Middle_Rect" class="option-btn" d="M274.025,44.423L514.413,282.394a45.567,45.567,0,0,1,0,64.9,46.691,46.691,0,0,1-65.56,0L208.465,109.324a45.566,45.566,0,0,1,0-64.9A46.691,46.691,0,0,1,274.025,44.423Z" />
+                <path id="Bottom_Rect" class="option-btn" d="M110.124,55.24L503.486,444.647a45.567,45.567,0,0,1,0,64.9,46.691,46.691,0,0,1-65.56,0L44.564,120.141a45.566,45.566,0,0,1,0-64.9A46.691,46.691,0,0,1,110.124,55.24Z" />
+            </svg>
+        </button>
         <div class="footer-container">
             <div class="footer-container-">
                 <div class="footer-home">
-                    <a href="/index.html">
-                        <img src="/images/icon.png" with="50px" height="50px" />
+                    <a href="/">
+                        <img src="/img/icon.png" with="50px" height="50px" />
                     </a>
                 </div>
                 <div class="footer-info">
